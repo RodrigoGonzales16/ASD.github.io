@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" class="js">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=768px">
+    <title>Autopools | XoXo Network | For the people and by the people</title>
+    <link rel="stylesheet" href="assets/css/vendor.bundle.css?ver=192">
+    <link rel="stylesheet" href="assets/css/style-lobelia.css?ver=192">
+    <link rel="stylesheet" href="assets/css/theme.css?ver=192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ff7700">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body class="nk-body body-wider mode-onepage bg-light">
+    <div class="nk-wrap">
+
+        <header class="nk-header page-header is-sticky is-shrink is-dark" id="header">
+            <!-- Header @s -->
+            <div class="header-main bg-theme-grad">
+                <div class="header-container container">
+                    <div class="header-wrap">
+                        <!-- Logo @s -->
+                        <div class="header-logo logo animated" data-animate="fadeInDown" data-delay=".6">
+                            <a href="./" class="logo-link">
+                                <img class="logo-dark" src="images/logo-full-white.png" srcset="images/logo-full-white.png 2x" alt="logo">
+                                <img class="logo-light" src="images/logo-full-white.png" srcset="images/logo-full-white.png 2x" alt="logo">
+                            </a>
+                        </div>
+                        <!-- Menu Toogle @s -->
+                        <div class="header-nav-toggle">
+                            <a href="#" class="navbar-toggle" data-menu-toggle="header-menu">
+                                <div class="toggle-line">
+                                    <span></span>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- Menu @s -->
+                        <div class="header-navbar animated" data-animate="fadeInDown" data-delay=".75">
+                            <nav class="header-menu" id="header-menu">
+                                <ul class="menu">
+                                    <li class="menu-item">
+                                        <a class="menu-link nav-link" href="./">Home</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a class="menu-link nav-link" href="dashboard">Dashboard</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a class="menu-link nav-link active" href="autopools">Autopools</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a class="menu-link nav-link" href="transactions">Transactions</a>
+                                    </li>
+                                    <li class="menu-item d-none">
+                                        <a class="menu-link nav-link" href="myteam">My Team</a>
+                                    </li>
+                                </ul>
+                                <ul class="menu-btns">
+                                    <li><a href="#" class="btn btn-md btn-auto btn-info no-change" id="Logout"><span>Logout</span></a></li>
+                                </ul>
+                            </nav>
+                        </div><!-- .header-navbar @e -->
+                    </div>
+                </div>
+            </div><!-- .header-main @e -->
+        </header>
+
+        <main class="nk-pages" style="min-height: 100vh">
+
+            <section class="section bg-white pt-5 pb-5">
+                <div class="container">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <h3 class="tc-white bg-zinnia text-center pt-2 pb-2">XOXO Net Count: <span class="xoxoNetCount">0</span></h3>
+                      </div>
+                      <div class="col-lg-6">
+                        <h3 class="tc-white bg-zinnia text-center pt-2 pb-2">XOXO Total Net Profit: <span class="xoxoNetProfit">0</span> ETH</h3>
+                      </div>
+                    </div>
+                   <div class="row">
+                       <div class="col-lg-12 mb-5 mt-5">
+
+                          <div class="accountBlock p-3 bg-light border border-dark">
+                            <h3 class="title title-md mb-1 text-secondary">Account ID: <span class="accountId text-primary"></span></h3>
+                            <h4 class="title title-md mb-1 text-secondary">Eth address: <span class="ethAddress text-primary"></span></h3>
+                            <div><span class="h5 text-secondary">RefLink: <span id="referralLink" onclick="copyRefLink();"></span> <a href="javascript:copyRefLink();" class="text-primary"><i class="fa fa-copy ml-2"></i></a></span></div>
+
+                            <input type="text" size="40" class="form-control _referralLink" id="referralLinkInput" value="" style="position: absolute; left: -9999px">
+                          </div>
+
+                       </div>
+                       <div class="col-lg-12">
+
+                            <h1 class="title">Autopools</h1>
+
+                            <table class="table table-bordered table-hover table-striped" id="Autopools">
+                                <thead>
+                                    <tr>
+                                        <th class="bg-default tc-light font-weight-bold">Pool name</th>
+                                        <th class="bg-default tc-light font-weight-bold">Entry fees</th>
+                                        <th class="bg-default tc-light font-weight-bold">Total users / Active slot</th>
+                                        <th class="bg-default tc-light font-weight-bold">Total slots</th>
+                                        <th class="bg-default tc-light font-weight-bold">Your first slot</th>
+                                        <th class="bg-default tc-light font-weight-bold">Active address</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Autopool 1</td>
+                                        <td>0.1 ETH</td>
+                                        <td class="ap1usersCount" colspan="3">getting...</td>
+                                        <td class="bg-light">N/A</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="ap2">Autopool 2</a></td>
+                                        <td>0.2 ETH</td>
+                                        <td class="ap2usersCount">getting...</td>
+                                        <td class="ap2slotsCount">getting...</td>
+                                        <td class="ap2firstSlot">getting...</td>
+                                        <td class="ap2activeAddr">getting...</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="ap3">Autopool 3</a></td>
+                                        <td>0.3 ETH</td>
+                                        <td class="ap3usersCount">getting...</td>
+                                        <td class="ap3slotsCount">getting...</td>
+                                        <td class="ap3firstSlot">getting...</td>
+                                        <td class="ap3activeAddr">getting...</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="ap4">Autopool 4</a></td>
+                                        <td>0.4 ETH</td>
+                                        <td class="ap4usersCount">getting...</td>
+                                        <td class="ap4slotsCount">getting...</td>
+                                        <td class="ap4firstSlot">getting...</td>
+                                        <td class="ap4activeAddr">getting...</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="ap5">Autopool 5</a></td>
+                                        <td>0.5 ETH</td>
+                                        <td class="ap5usersCount">getting...</td>
+                                        <td class="ap5slotsCount">getting...</td>
+                                        <td class="ap5firstSlot">getting...</td>
+                                        <td class="ap5activeAddr">getting...</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="ap6">Autopool 6</a></td>
+                                        <td>0.7 ETH</td>
+                                        <td class="ap6usersCount">getting...</td>
+                                        <td class="ap6slotsCount">getting...</td>
+                                        <td class="ap6firstSlot">getting...</td>
+                                        <td class="ap6activeAddr">getting...</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="ap7">Autopool 7</a></td>
+                                        <td>1 ETH</td>
+                                        <td class="ap7usersCount">getting...</td>
+                                        <td class="ap7slotsCount">getting...</td>
+                                        <td class="ap7firstSlot">getting...</td>
+                                        <td class="ap7activeAddr">getting...</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                       </div>
+                   </div>
+                </div>
+            </section>
+        
+
+        </main>
+
+        <footer class="nk-footer bg-theme-grad ov-h">
+            <section class="section section-t-s-fixed section-b-s-fixed  tc-light animated" data-animate="fadeInUp" data-delay=".2">
+                <div class="container">
+                    <div class="nk-block">
+                        <div class="gutter-vr-15px px row justify-content-between align-items-center text-center text-sm-left">
+                            <div class="col-lg-4">
+                                <ul class="social justify-content-center ml-n2">
+                                    <li><a href="https://www.facebook.com/groups/xoxonetwork.official/" target="_blank"><em class="social-icon social-icon-transparent fab fa-facebook-f"></em></a></li>
+                                    <li><a href="https://t.me/xoxonetwork_official" target="_blank"><em class="social-icon social-icon-transparent fab fa-telegram"></em></a></li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-5 col-sm-8">
+                                <div class="copyright-text copyright-text-s4">
+                                    <p>© Copyright 2020, XoXoNetwork.io. All Rights Reserved.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-sm-4 text-sm-right">
+                                <ul class="footer-links">
+                                    <li><a href="#">Terms &amp; Conditions</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </footer>
+    </div>
+    <!-- preloader -->
+    <div class="preloader preloader-alt no-split"><span class="spinner spinner-alt"><img class="spinner-brand" src="images/logo-full-white.png" alt=""></span></div>
+    <script src="assets/js/jquery.bundle.js?ver=192"></script>
+    <script src="//cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="assets/js/scripts.js?ver=192"></script>
+    <script src="assets/js/charts.js"></script>
+    <script src="app.js?ver=1590974442"></script> 
+</body>
+</html>
